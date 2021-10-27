@@ -1,6 +1,7 @@
-import { LaunchesListContainer } from "@/modules/launches/application/launches-list/launches-list.container"
 import type { NextPage } from "next"
 import Head from "next/head"
+import { LaunchesListContainer } from "@/modules/launches/application/launches-list/launches-list.container"
+import { Layout } from "@/components/layout/layout"
 
 const Home: NextPage = () => {
 	return (
@@ -20,7 +21,9 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<LaunchesListContainer />
+			<Layout>
+				<LaunchesListContainer />
+			</Layout>
 		</>
 	)
 }

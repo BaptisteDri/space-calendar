@@ -11,7 +11,7 @@ export const LaunchesListView = ({ count, launches }: Props) => {
 	return (
 		<div className={styles.container}>
 			<Title>Upcomings</Title>
-			<div></div>
+			<div className={styles.list}>List</div>
 		</div>
 	)
 }
