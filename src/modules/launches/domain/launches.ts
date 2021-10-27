@@ -7,7 +7,7 @@ export interface Launch {
 	id: string
 	name: string
 	net: string
-	status: string
+	status: Status
 }
 
 export interface Launches {

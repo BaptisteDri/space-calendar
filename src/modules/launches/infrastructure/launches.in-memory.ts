@@ -9,6 +9,10 @@ export class LaunchesInMemory implements LaunchesOutput {
 		results: [],
 	}
 
+	setLaunches(launches: InfraModalLaunches | undefined): void {
+		this.launches = launches ?? undefined
+	}
+
 	getLaunches(): Promise<Launches> {
 		if (!this.launches) {
 			throw new Error("An error occured while fetching launches")
