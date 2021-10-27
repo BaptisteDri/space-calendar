@@ -7,15 +7,8 @@ import { mapToDomainModel } from "./launches.mapper"
 describe("[launches] unit tests", () => {
 	const launchesOutput = new LaunchesInMemory()
 
-	beforeEach(() => {
-		launchesOutput.setLaunches({
-			count: 0,
-			results: [],
-		})
-	})
-
 	describe("when i want to get upcoming launches", () => {
-		it("it should get it without error", async () => {
+		it("i should get it without error", async () => {
 			launchesOutput.setLaunches(launchesFakes)
 
 			const launches: Launches = await getLaunches({ launchesOutput })
@@ -23,6 +16,12 @@ describe("[launches] unit tests", () => {
 			const expectedLaunches: Launches = mapToDomainModel(launchesFakes)
 
 			expect(launches).toEqual(expectedLaunches)
+		})
+
+		it("i shouldn't get it and throw error", async () => {
+			launchesOutput.setLaunches(undefined)
+
+			await expect(getLaunches({ launchesOutput })).rejects.toThrowError()
 		})
 	})
 })
