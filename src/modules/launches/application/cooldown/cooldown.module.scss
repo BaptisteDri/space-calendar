@@ -1,0 +1,34 @@
+@import "/src/styles/variables";
+
+.container {
+	background-color: $card-background-color;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	box-shadow: $card-box-shadow;
+
+	.date {
+		color: #afbfce;
+		font-size: 0.8rem;
+	}
+
+	.timer {
+		display: flex;
+		gap: 0.5rem;
+
+		.value {
+			color: $title-color;
+			font-weight: bold;
+			font-size: 1.563rem;
+		}
+
+		.label {
+			color: #afbfce;
+			text-transform: uppercase;
+			font-size: 0.8rem;
+		}
+	}
+}
