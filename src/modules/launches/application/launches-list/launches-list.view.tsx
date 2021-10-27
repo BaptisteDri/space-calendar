@@ -1,6 +1,7 @@
 import styles from "./launches-list.module.scss"
 import { Launch } from "@/modules/launches/domain/launches"
 import { Title } from "@/components/title/title"
+import { LaunchCardContainer } from "../launch-card/launch-card.container"
 
 interface Props {
 	count: number
@@ -10,8 +11,12 @@ interface Props {
 export const LaunchesListView = ({ count, launches }: Props) => {
 	return (
 		<div className={styles.container}>
-			<Title>Upcomings</Title>
-			<div className={styles.list}>List</div>
+			<Title>Upcomings ({count})</Title>
+			<div className={styles.list}>
+				{launches.map((launch) => (
+					<LaunchCardContainer launch={launch} />
+				))}
+			</div>
 		</div>
 	)
 }

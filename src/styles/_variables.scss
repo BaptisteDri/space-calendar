@@ -1,7 +1,14 @@
+// COLORS
+
 $lavender: #dce6f0;
 $cadetblue: #658ebb;
 $darkslateblue: #335576;
 
 $background-color: $lavender;
 $title-color: $darkslateblue;
-$subtitle-color: $cadetblue;
+$label-color: $cadetblue;
+
+// RESPONSIVE BREAKPOINTS
+
+$break-layout-tablet: 1024px;
+$break-layout-mobile: 767px;

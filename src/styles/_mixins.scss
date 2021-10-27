@@ -1,0 +1,13 @@
+@import "/src/styles/variables";
+
+@mixin tablet {
+	@media only screen and (max-width: $break-layout-tablet) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media only screen and (max-width: $break-layout-mobile) {
+		@content;
+	}
+}
