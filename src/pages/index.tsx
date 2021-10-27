@@ -1,3 +1,4 @@
+import { LaunchesListContainer } from "@/modules/launches/application/launches-list/launches-list.container"
 import type { NextPage } from "next"
 import Head from "next/head"
 
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div>Hello World</div>
+			<LaunchesListContainer />
 		</>
 	)
 }
