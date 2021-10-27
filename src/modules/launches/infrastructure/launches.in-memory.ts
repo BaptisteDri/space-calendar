@@ -2,12 +2,10 @@ import { LaunchesOutput } from "@/modules/launches/domain/launches.output"
 import { Launches } from "@/modules/launches/domain/launches"
 import { Launches as InfraModalLaunches } from "@/modules/launches/infrastructure/launches"
 import { mapToDomainModel } from "@/modules/launches/domain/launches.mapper"
+import { launchesFakes } from "./launches.fakes"
 
 export class LaunchesInMemory implements LaunchesOutput {
-	private launches: InfraModalLaunches | undefined = {
-		count: 0,
-		results: [],
-	}
+	private launches: InfraModalLaunches | undefined = launchesFakes
 
 	setLaunches(launches: InfraModalLaunches | undefined): void {
 		this.launches = launches ?? undefined
