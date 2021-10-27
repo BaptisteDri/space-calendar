@@ -5,6 +5,10 @@
 	flex-direction: column;
 	gap: 3rem;
 
+	@include mobile {
+		gap: 1.5rem;
+	}
+
 	.list {
 		display: grid;
 		gap: 2rem;

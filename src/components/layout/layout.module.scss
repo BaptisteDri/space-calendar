@@ -1,5 +1,11 @@
+@import "/src/styles/mixins";
+
 .layout {
 	padding: 2rem 3rem;
 	max-width: 1180px;
 	margin: 0 auto;
+
+	@include mobile {
+		padding: 1rem 1.5rem;
+	}
 }
