@@ -1,20 +1,10 @@
 // COLORS
-
-$lavender: #dce6f0;
-$cadetblue: #658ebb;
-$darkslateblue: #335576;
-$whitesmoke: #eff3f7;
-
-$background-color: $lavender;
-$card-background-color: $whitesmoke;
-$title-color: $darkslateblue;
-$label-color: $cadetblue;
+$background-color: #13171d;
+$card-background-color: #20242c;
+$title-color: #fff;
+$label-color: #979797;
+$main-color: #3d6df8;
 
 // RESPONSIVE BREAKPOINTS
-
 $break-layout-tablet: 1024px;
 $break-layout-mobile: 767px;
-
-// SHADOWS
-$card-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-	0 15px 40px rgba(166, 173, 201, 0.2);

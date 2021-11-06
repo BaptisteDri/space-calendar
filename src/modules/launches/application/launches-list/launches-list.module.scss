@@ -9,17 +9,15 @@
 		gap: 1.5rem;
 	}
 
-	.list {
+	.wrapper {
 		display: grid;
-		gap: 2rem;
-		grid-template-columns: repeat(3, 1fr);
+		gap: 4rem;
+		grid-template-columns: 3fr 2fr;
 
-		@include tablet {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		@include mobile {
-			grid-template-columns: repeat(1, 1fr);
+		.list {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
 		}
 	}
 }
