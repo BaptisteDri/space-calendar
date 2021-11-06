@@ -14,12 +14,12 @@ export const LaunchesListView = ({ count, launches }: Props) => {
 		<div className={styles.container}>
 			<Title>Upcomings ({count})</Title>
 			<div className={styles.wrapper}>
-				<AnimatedIllustration />
 				<div className={styles.list}>
 					{launches.map((launch) => (
 						<LaunchCardContainer launch={launch} />
 					))}
 				</div>
+				<AnimatedIllustration />
 			</div>
 		</div>
 	)
