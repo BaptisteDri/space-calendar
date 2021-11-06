@@ -2,10 +2,10 @@
 
 .wrapper {
 	position: relative;
-	height: 80vh;
 
 	.container {
 		top: 0;
-		position: sticky;
+		position: fixed;
+		transform: scale(0.8);
 	}
 }
