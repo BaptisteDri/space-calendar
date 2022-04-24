@@ -1,5 +1,9 @@
 import { CooldownView } from "./couldown.view"
 
-export const CooldownContainer = () => {
-	return <CooldownView />
+interface Props {
+	date: string
+}
+
+export const CooldownContainer = ({ date }: Props) => {
+	return <CooldownView date={date} />
 }

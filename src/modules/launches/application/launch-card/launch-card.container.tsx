@@ -6,13 +6,14 @@ interface Props {
 }
 
 export const LaunchCardContainer = ({ launch }: Props) => {
-	const { name, launch_service_provider, image } = launch
+	const { name, launch_service_provider, image, net } = launch
 
 	return (
 		<LaunchCardView
 			title={name}
 			agency={launch_service_provider.name}
 			img={image}
+			date={net}
 		/>
 	)
 }

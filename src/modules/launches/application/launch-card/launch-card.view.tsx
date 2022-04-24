@@ -8,9 +8,10 @@ interface Props {
 	title: string
 	agency: string
 	img: string
+	date: string
 }
 
-export const LaunchCardView = ({ title, agency, img }: Props) => {
+export const LaunchCardView = ({ title, agency, img, date }: Props) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
@@ -18,7 +19,7 @@ export const LaunchCardView = ({ title, agency, img }: Props) => {
 				<Label>{agency}</Label>
 			</div>
 			<CardThumbnail src={img} alt={title} />
-			<CooldownContainer />
+			<CooldownContainer date={date} />
 		</div>
 	)
 }
