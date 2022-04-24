@@ -7,16 +7,17 @@ import { CardThumbnail } from "../card-thumbnail/card-thumbnail"
 interface Props {
 	title: string
 	agency: string
+	img: string
 }
 
-export const LaunchCardView = ({ title, agency }: Props) => {
+export const LaunchCardView = ({ title, agency, img }: Props) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
 				<Subtitle>{title}</Subtitle>
 				<Label>{agency}</Label>
 			</div>
-			<CardThumbnail />
+			<CardThumbnail src={img} alt={title} />
 			<CooldownContainer />
 		</div>
 	)

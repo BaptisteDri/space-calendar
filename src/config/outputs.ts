@@ -1,6 +1,5 @@
-// import { LaunchesApi } from "@/modules/launches/infrastructure/launches.api"
-import { LaunchesInMemory } from "@/modules/launches/infrastructure/launches.in-memory"
+import { LaunchesApi } from "@/modules/launches/infrastructure/launches.api"
 
 export const outputs = {
-	launchesOutput: new LaunchesInMemory(),
+	launchesOutput: new LaunchesApi(),
 }

@@ -14,11 +14,14 @@ export const LaunchesListContainer = () => {
 		_getLaunches()
 	}, [])
 
+	const { launchesOutput } = outputs
+
 	const _getLaunches = async () => {
 		try {
 			const launches: Launches = await getLaunches({
-				launchesOutput: outputs.launchesOutput,
+				launchesOutput,
 			})
+			console.log(launches)
 			setLaunches(launches)
 		} catch (error: any) {
 			console.error(error)

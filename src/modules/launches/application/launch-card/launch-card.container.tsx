@@ -6,11 +6,13 @@ interface Props {
 }
 
 export const LaunchCardContainer = ({ launch }: Props) => {
-	const { id, name } = launch
+	const { name, launch_service_provider, image } = launch
 
 	return (
-		<div key={id}>
-			<LaunchCardView title={"Falcon Heavy"} agency={"spacex"} />
-		</div>
+		<LaunchCardView
+			title={name}
+			agency={launch_service_provider.name}
+			img={image}
+		/>
 	)
 }
