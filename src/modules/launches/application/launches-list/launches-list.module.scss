@@ -14,6 +14,10 @@
 		gap: 4rem;
 		grid-template-columns: 1fr 1fr;
 
+		@include mobile {
+			grid-template-columns: 1fr;
+		}
+
 		.list {
 			display: flex;
 			flex-direction: column;
