@@ -1,9 +1,14 @@
 @import "/src/styles/variables";
+@import "/src/styles/mixins";
 
 .container {
 	aspect-ratio: 4/2;
 	border-radius: 3px;
 	overflow: hidden;
+
+	@include mobile {
+		aspect-ratio: 0.9;
+	}
 
 	.img {
 		width: 100%;
