@@ -1,3 +1,4 @@
+import { LazyLoader } from "../lazy-loader/lazy-loader"
 import styles from "./label.module.scss"
 
 interface Props {
@@ -5,5 +6,9 @@ interface Props {
 }
 
 export const Label = ({ children }: Props) => {
-	return <div className={styles.container}>{children}</div>
+	return children ? (
+		<div className={styles.container}>{children}</div>
+	) : (
+		<LazyLoader height={12} width={"30%"} />
+	)
 }
