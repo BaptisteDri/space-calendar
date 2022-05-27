@@ -13,7 +13,7 @@ export const LaunchCardContainer = ({ launch }: Props) => {
 			title={name}
 			agency={launch_service_provider.name}
 			img={image}
-			date={net}
+			net={net}
 		/>
 	)
 }
