@@ -7,10 +7,12 @@ import {
 import { CooldownView } from "./couldown.view"
 
 interface Props {
-	net: string
+	net?: string
 }
 
 export const CooldownContainer = ({ net }: Props) => {
+	if (!net) return <CooldownView />
+
 	const [days, setDays] = useState(0)
 	const [hours, setHours] = useState(0)
 	const [mins, setMins] = useState(0)

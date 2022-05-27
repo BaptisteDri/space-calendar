@@ -14,8 +14,8 @@ export const LaunchesListView = ({ count, launches }: Props) => {
 		<div className={styles.container}>
 			<Title>Upcoming launches ({count})</Title>
 			<div className={styles.wrapper}>
-				<div />
 				<div className={styles.list}>
+					<LaunchCardContainer />
 					{launches.map((launch) => (
 						<LaunchCardContainer launch={launch} key={launch.id} />
 					))}

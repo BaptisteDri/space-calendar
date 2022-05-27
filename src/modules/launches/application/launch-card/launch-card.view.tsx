@@ -5,10 +5,11 @@ import { CooldownContainer } from "../cooldown/cooldown.container"
 import { CardThumbnail } from "../card-thumbnail/card-thumbnail"
 
 interface Props {
-	title: string
-	agency: string
-	img: string
-	net: string
+	title?: string
+	agency?: string
+	img?: string
+	net?: string
+	lazy?: boolean
 }
 
 export const LaunchCardView = ({ title, agency, img, net }: Props) => {
