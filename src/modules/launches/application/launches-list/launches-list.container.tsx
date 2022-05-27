@@ -24,7 +24,11 @@ export const LaunchesListContainer = () => {
 			console.log(launches)
 			setLaunches(launches)
 		} catch (error: any) {
-			console.error(error)
+			if (error.message.split(" ").includes("429")) {
+				console.error("too many requests! please, try again later")
+			} else {
+				console.log(error)
+			}
 		}
 	}
 

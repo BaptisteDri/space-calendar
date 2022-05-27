@@ -4,8 +4,12 @@ import { mapToDomainModel } from "@/modules/launches/domain/launches.mapper"
 
 export class LaunchesApi implements LaunchesOutput {
 	getLaunches() {
+		const params = {
+			limit: 50,
+		}
+
 		return api
-			.get("/launch/upcoming/")
+			.get("/launch/upcoming", { params })
 			.then(({ data }) => mapToDomainModel(data))
 	}
 }
